@@ -1,2 +1,2 @@
 # e-message
-提供e-message4及上版本问题和解决方案
+提供e-message4及以上版本的问题和解决方案
