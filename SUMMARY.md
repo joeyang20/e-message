@@ -14,6 +14,7 @@
 * [2.oa主页无法打开最新e4下载页面](chapter2/E4download.md)
 * [3.web端无法展示e-message操作面板](chapter2/E4webNotShow.md)
 * [4.pc端退出emessage报错](chapter2/E4logoutErr.md)
+* [5.讨论组无法打开](chapter2/E4groupOpenErr.md)
 * [每章小结](chapter2/warmup2.md)
 
 ## 第三章:e4功能配置设定
