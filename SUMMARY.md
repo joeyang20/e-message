@@ -8,6 +8,7 @@
 * [2.e4没有实现的功能](chapter1/E4hasNot.md)
 * [3.e4小知识](chapter1/E4knowledge.md)
 * [4.e4升级改进功能](chapter1/E4change.md)
+* [5.e4功能改造建议收集](chapter1/E4suggestion.md)
 * [每章小结](chapter1/warmup1.md)
 
 ## 第二章:升级e4问题及解决方案汇总
@@ -19,6 +20,10 @@
 * [6.聊天面板上未读消息提醒](chapter2/E4messageAlter.md)
 * [7.e4 pc端无法接收流程提醒](chapter2/E4flowAlter.md)
 * [8.e4 pc端文档上传下载问题](chapter2/E4fileErr.md)
+* [9.e4界面僵死，没响应](chapter2/E4deadWithoutResponse.md)
+* [10.pc端无法查看消息记录](chapter2/E4historyMessage.md)
+* [11.聊天界面无法显示消息阅读状态](chapter2/E4messageSatus.md)
+* [12.聊天界面一直显示loading](chapter2/E4alwaysLoading.md)
 * [每章小结](chapter2/warmup2.md)
 
 ## 第三章:e4功能配置设定
