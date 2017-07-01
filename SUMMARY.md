@@ -4,7 +4,7 @@
 * [Introduction](README.md)
 
 ## 第一章:升级e4的准备,e4入门初认识
-* [1.e3和e4的不同点](chapter1/diffE3E4.md)
+* [1.e-message4.0简单介绍](chapter1/E4info.md)
 * [2.e4没有实现的功能](chapter1/E4hasNot.md)
 * [3.e4小知识](chapter1/E4knowledge.md)
 * [4.e4升级改进功能](chapter1/E4change.md)
