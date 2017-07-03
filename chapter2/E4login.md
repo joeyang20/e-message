@@ -14,8 +14,8 @@
 
 * 3.然后再把`下方的配置`拷贝进去，粘贴在`文件最上方`，<web-app>节点的下方，
 
-><filter><br/>
->&nbsp;&nbsp;&nbsp;&nbsp;<filter-name>SocialIMFilter</filter-name><br/>
+<filter><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<filter-name>SocialIMFilter</filter-name><br/>
 >&nbsp;&nbsp;&nbsp;&nbsp<filter-class>weaver.social.filter.SocialIMFilter</filter-class><br/></filter\><br/>
 ><filter-mapping><br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;<filter-name>SocialIMFilter</filter-name><br/>

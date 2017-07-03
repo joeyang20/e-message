@@ -9,5 +9,7 @@
 
 ## 第二章:EM4问题及解决方案汇总
 * [1.客户端单点登录异常以及下载文件乱码](chapter2/E4login.md)
+
 ## 第三章:EM4功能使用设置及相关配置说明
+* [1.后端应用中心emessage设置](chapter3/E4managePage.md)
 ## 结束
