@@ -12,35 +12,33 @@
 
 * 2.打开文件，并且用`Ctrl+F`快捷键搜索是否含有`SocialIMFilter`关键字，如果找打这个`过滤器相关的配置`，那就`把以前的配置删除掉`，
 
-* 3.然后再把`下方的配置`拷贝进去，粘贴在`文件最上方`，\<web-app\>节点的下方，
+* 3.然后再把`下方的配置`拷贝进去，粘贴在`文件最上方`，<web-app>节点的下方，
 
->\<filter><br/>
->&nbsp;&nbsp;&nbsp;&nbsp;\<filter-name>SocialIMFilter\<\/filter-name><br/>
->&nbsp;&nbsp;&nbsp;&nbsp;\<filter-class>weaver.social.filter.SocialIMFilter\<\/filter-class><br/>
-> \</filter\><br/>
->\<filter-mapping\><br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;\<filter-name\>SocialIMFilter\<\/filter-name\><br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;\<url-pattern\>/social/im/*.jsp\<\/url-pattern\><br/>
-> \<\/filter-mapping\><br/>
-> \<filter-mapping\><br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;\<filter-name\>SocialIMFilter\<\/filter-name\><br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;\<url-pattern\>/weaver/weaver.file.FileDownload\<\/url-pattern\><br/>
-> \<\/filter-mapping\><br/>
+><filter><br/>
+>&nbsp;&nbsp;&nbsp;&nbsp;<filter-name>SocialIMFilter</filter-name><br/>
+>&nbsp;&nbsp;&nbsp;&nbsp<filter-class>weaver.social.filter.SocialIMFilter</filter-class><br/></filter\><br/>
+><filter-mapping><br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;<filter-name>SocialIMFilter</filter-name><br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;<url-pattern>/social/im/*.jsp</url-pattern><br/>
+></filter-mapping\><br/>
+><filter-mapping\><br/>
+>&nbsp;&nbsp;&nbsp;&nbsp;<filter-name>SocialIMFilter</filter-name><br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;<url-pattern>/weaver/weaver.file.FileDownload</url-pattern><br/>
+></filter-mapping><br/>
 
 * 4.如果客户服务器使用的是`weblogic`作为web容器，请忽略上方配置而拷贝下方的配置：
 
->\<filter><br/>
->&nbsp;&nbsp;&nbsp;&nbsp;\<filter-name>SocialIMFilter\<\/filter-name><br/>
->&nbsp;&nbsp;&nbsp;&nbsp;\<filter-class>weaver.social.filter.SocialIMFilter\<\/filter-class><br/>
-> \</filter\><br/>
->\<filter-mapping\><br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;\<filter-name\>SocialIMFilter\<\/filter-name\><br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;\<url-pattern\>/social/im/*\<\/url-pattern\><br/>
-> \<\/filter-mapping\><br/>
-> \<filter-mapping\><br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;\<filter-name\>SocialIMFilter\<\/filter-name\><br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;\<url-pattern\>/weaver/weaver.file.FileDownload\<\/url-pattern\><br/>
-> \<\/filter-mapping\><br/>
+><filter><br/>
+>&nbsp;&nbsp;&nbsp;&nbsp;<filter-name>SocialIMFilter</filter-name><br/>
+>&nbsp;&nbsp;&nbsp;&nbsp<filter-class>weaver.social.filter.SocialIMFilter</filter-class><br/></filter\><br/>
+><filter-mapping><br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;<filter-name>SocialIMFilter</filter-name><br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;<url-pattern>/social/im/*</url-pattern><br/>
+></filter-mapping\><br/>
+><filter-mapping\><br/>
+>&nbsp;&nbsp;&nbsp;&nbsp;<filter-name>SocialIMFilter</filter-name><br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;<url-pattern>/weaver/weaver.file.FileDownload</url-pattern><br/>
+></filter-mapping><br/>
 
 
 * 5.修改之后如下图：
