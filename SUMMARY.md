@@ -7,5 +7,7 @@
 * [1.EM4简单介绍](chapter1/E4info.md)
 * [2.EM4消息云的区别](chapter1/E4cloudDiff.md)
 
+## 第二章:EM4问题及解决方案汇总
 
+## 第三章:EM4功能使用设置及相关配置说明
 ## 结束
