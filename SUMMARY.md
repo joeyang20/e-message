@@ -14,7 +14,9 @@
     * 私有云
         * [私有云集群部署](chapter2)
         * [私有云证书设置](chapter2)
+* [3.客户端单点登录异常以及下载文件乱码](chapter2/E4login.md)
 
 ## 第三章:EM4功能使用设置及相关配置说明
 * [1.后端应用中心emessage设置](chapter3/E4managePage.md)
+
 ## 结束
