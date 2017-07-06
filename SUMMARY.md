@@ -22,5 +22,5 @@
 
 ## 第三章:EM4功能使用设置及相关配置说明
 * [1.后端应用中心emessage设置](chapter3/E4managePage.md)
-
+* [2.官网更新包使用指南](chapter3/E4managePage.md)
 ## 结束
