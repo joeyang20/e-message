@@ -14,33 +14,35 @@
 
 * 3.然后再把`下方的配置`拷贝进去，粘贴在`文件最上方`，<web-app>节点的下方，
 
-<filter><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<filter-name>SocialIMFilter</filter-name><br/>
->&nbsp;&nbsp;&nbsp;&nbsp<filter-class>weaver.social.filter.SocialIMFilter</filter-class><br/></filter\><br/>
-><filter-mapping><br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;<filter-name>SocialIMFilter</filter-name><br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;<url-pattern>/social/im/*.jsp</url-pattern><br/>
-></filter-mapping\><br/>
-><filter-mapping\><br/>
->&nbsp;&nbsp;&nbsp;&nbsp;<filter-name>SocialIMFilter</filter-name><br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;<url-pattern>/weaver/weaver.file.FileDownload</url-pattern><br/>
-></filter-mapping><br/>
+> \<filter><br/>
+\<filter-name>SocialIMFilter\</filter-name><br/>
+\<filter-class>weaver.social.filter.SocialIMFilter\</filter-class><br/>
+\</filter><br/>
+\<filter-mapping><br/>
+\<filter-name>SocialIMFilter\</filter-name><br/>
+\<url-pattern>/social/im/*.jsp\</url-pattern><br/>
+\</filter-mapping><br/>
+\<filter-mapping><br/>
+\<filter-name>SocialIMFilter\</filter-name><br/>
+\<url-pattern>/weaver/weaver.file.FileDownload\</url-pattern><br/>
+\</filter-mapping><br/>
 
 * 4.如果客户服务器使用的是`weblogic`作为web容器，请忽略上方配置而拷贝下方的配置：
 
-><filter><br/>
->&nbsp;&nbsp;&nbsp;&nbsp;<filter-name>SocialIMFilter</filter-name><br/>
->&nbsp;&nbsp;&nbsp;&nbsp<filter-class>weaver.social.filter.SocialIMFilter</filter-class><br/></filter\><br/>
-><filter-mapping><br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;<filter-name>SocialIMFilter</filter-name><br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;<url-pattern>/social/im/*</url-pattern><br/>
-></filter-mapping\><br/>
-><filter-mapping\><br/>
->&nbsp;&nbsp;&nbsp;&nbsp;<filter-name>SocialIMFilter</filter-name><br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;<url-pattern>/weaver/weaver.file.FileDownload</url-pattern><br/>
-></filter-mapping><br/>
+> \<filter><br/>
+\<filter-name>SocialIMFilter\</filter-name><br/>
+\<filter-class>weaver.social.filter.SocialIMFilter\</filter-class><br/>
+\</filter><br/>
+\<filter-mapping><br/>
+\<filter-name>SocialIMFilter\</filter-name><br/>
+\<url-pattern>/social/im/*\</url-pattern><br/>
+\</filter-mapping><br/>
+\<filter-mapping><br/>
+\<filter-name>SocialIMFilter\</filter-name><br/>
+\<url-pattern>/weaver/weaver.file.FileDownload\</url-pattern><br/>
+\</filter-mapping><br/>
 
 
 * 5.修改之后如下图：
-<br />
+请务必把该**过滤器**放在下图说明的位置，如果有新的过滤器需要配置，例如**安全过滤器SecurityFilter**，请不要放在**SocialIMFilter**过滤器上方，否则会出现问题
 ![web.xml修改展示](/image/过滤器修改.png "Title")
