@@ -21,7 +21,9 @@
 定制功能上：
 * **在线状态功能**：私有云独有，公有云没有
 
-如何辨别：<br/>
-在部署的目录下找到**ecology80\WEB-INF\prop\OpenfireModule.properties**，如果该文件存在并且存在`Openfire=true`，那就代表使用的是私有云，如下图：
+如何辨别：
+* 在部署的目录下找到文件**ecology80\WEB-INF\prop\OpenfireModule.properties**，如果该文件存在并且存在`Openfire=true`，那就代表使用的是私有云，如下图：
+![启用私有云服务](/image/c1/是否启用私有云.png "Title")
 
-
+* 如果不存在该文件，或者该文件的字段`Openfire=false`，那就代表使用的是公有云，如下图：
+![启用公有云服务](/image/c1/是否启用公有云.png "Title")
