@@ -26,7 +26,7 @@
 
 ## 第三章:EM4功能使用设置及相关配置说明
 * 1.客户端使用说明：
-    * [a.EM4客户端清理缓存](chapter3/updateEmessage.md)
+    * [a.EM4客户端清理缓存](chapter3/setE4clean.md)
 * 2.EM4后端管理中心：
     * [a.后端应用中心EM4设置](chapter3/E4managePage.md)
 * [3.官网更新包使用指南](chapter3/updateEmessage.md)
