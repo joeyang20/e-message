@@ -22,7 +22,7 @@
         * [b.私有云证书设置]()
         * [c.私有云表情乱码](chapter2/PrivateClondEmoji.md)
 * [3.EM4管理界面出现null字符](chapter2/E4nullSolve.md)
-* [4.EM4客户端安装报错](chapter2/E4nullSolve.md)
+* [4.EM4客户端安装报错](chapter2/E4installChErr.md)
 
 ## 第三章:EM4功能使用设置及相关配置说明
 * 1.客户端使用说明：
