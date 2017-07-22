@@ -5,3 +5,5 @@
 `update HrmResource set passwordlock=0 where loginid='登陆名'`
 * 3.消息撤回最大期限设置：<br/>
 `ClientSet.maxWithdrawTime = 1200000`
+* 4.emessage默认头像，linux环境无法生成中文头像，或者没有默认头像：<br/>
+`需要在linux环境上安装宋体字。`

@@ -11,6 +11,8 @@
 * 4.私有云
     * [a.使用检查](chapter1/privateCloudCheck.md)
 * [5.其他问题说明](chapter1/otherQue.md)
+* [6.过滤器说明](chapter1/filterInfo.md)
+* [7.数据库语句查询说明](chapter1/dataQuery.md)
 
 ## 第二章:EM4问题及解决方案汇总
 * [1.客户端单点登录异常以及下载文件乱码](chapter2/E4login.md)
