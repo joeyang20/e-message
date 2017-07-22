@@ -13,35 +13,36 @@
 * 2.打开文件，并且用`Ctrl+F`快捷键搜索是否含有`SocialIMFilter`关键字，如果找打这个`过滤器相关的配置`，那就`把以前的配置删除掉`，
 
 * 3.然后再把`下方的配置`拷贝进去，粘贴在`文件最上方`，<web-app>节点的下方，
-
-> \<filter><br/>
-\<filter-name>SocialIMFilter</filter-name><br/>
-\<filter-class>weaver.social.filter.SocialIMFilter</filter-class><br/>
-\</filter><br/>
-\<filter-mapping><br/>
-\<filter-name>SocialIMFilter</filter-name><br/>
-\<url-pattern>/social/im/*.jsp</url-pattern><br/>
-\</filter-mapping><br/>
-\<filter-mapping><br/>
-\<filter-name>SocialIMFilter</filter-name><br/>
-\<url-pattern>/weaver/weaver.file.FileDownload</url-pattern><br/>
-\</filter-mapping><br/>
+```
+<filter>
+<filter-name>SocialIMFilter</filter-name>
+<filter-class>weaver.social.filter.SocialIMFilter</filter-class>
+</filter>
+<filter-mapping>
+<filter-name>SocialIMFilter</filter-name>
+<url-pattern>/social/im/*.jsp</url-pattern>
+</filter-mapping>
+<filter-mapping>
+<filter-name>SocialIMFilter</filter-name>
+<url-pattern>/weaver/weaver.file.FileDownload</url-pattern>
+</filter-mapping>
+```
 
 * 4.如果客户服务器使用的是`weblogic`作为web容器，请忽略上方配置而拷贝下方的配置：
-
-> \<filter><br/>
-\<filter-name>SocialIMFilter</filter-name><br/>
-\<filter-class>weaver.social.filter.SocialIMFilter</filter-class><br/>
-\</filter><br/>
-\<filter-mapping><br/>
-\<filter-name>SocialIMFilter</filter-name><br/>
-\<url-pattern>/social/im/*</url-pattern><br/>
-\</filter-mapping><br/>
-\<filter-mapping><br/>
-\<filter-name>SocialIMFilter</filter-name><br/>
-\<url-pattern>/weaver/weaver.file.FileDownload</url-pattern><br/>
-\</filter-mapping><br/>
-
+```
+<filter>
+<filter-name>SocialIMFilter</filter-name>
+<filter-class>weaver.social.filter.SocialIMFilter</filter-class>
+</filter>
+<filter-mapping>
+<filter-name>SocialIMFilter</filter-name>
+<url-pattern>/social/im/*</url-pattern>
+</filter-mapping>
+<filter-mapping>
+<filter-name>SocialIMFilter</filter-name>
+<url-pattern>/weaver/weaver.file.FileDownload</url-pattern>
+</filter-mapping>
+```
 
 * 5.修改之后如下图：
 请务必把该**过滤器**放在下图说明的位置，如果有新的过滤器需要配置，例如**安全过滤器SecurityFilter**，请不要放在**SocialIMFilter**过滤器上方，否则会出现问题
@@ -49,4 +50,4 @@
 
 * 6.上述步骤完成后，请重启OA服务，这样才能让配置生效。
 
-* 7.如果客户是集群环境，那么集群环境里面的所有的OA服务的文件都得修改，这样才能确保功能正常，而且建议最好是一台轮着一台修改并且测试，不要一下子全都改了。
+* 7.如果客户是集群环境，那么集群环境里面的所有的OA服务的文件都得修改，这样才能确保功能正常，而且建议最好是一台轮着一台修改并且测试，不要一下子全都改了。并且每一台都测试通过才行。
