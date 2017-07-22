@@ -23,12 +23,12 @@ openfireEmessageClientUrl=内网ip
 ```
 telnet IP 端口
 ```
-按照上方格式使用即可，下图：
+* 按照上方格式使用即可，下图：<br/>
 ![telnet命令](/image/c1/telnet命令.png "Title")
 IP：指需要访问的IP，端口：需要开放的端口（就是**7070，9090，5222**三个），<br/>
-如下图展示：端口开放成功示例：
+* 如下图展示：端口开放成功示例：<br/>
 ![telnet成功](/image/c1/telnet成功.png "Title")
-端口开放失败，如下图：
+* 端口开放失败，如下图：<br/>
 ![telnet失败](/image/c1/telnet失败.png "Title")
 
 
