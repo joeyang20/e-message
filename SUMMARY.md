@@ -30,6 +30,7 @@
 * 1.客户端使用说明：
     * [a.客户端清理缓存](chapter3/setE4clean.md)
     * [b.客户端菜单显示设置](chapter3/FrontMenuSet.md)
+    * [c.群主转让功能介绍](chapter3/GroupChange.md)
 * 2.EM4后端管理中心：
     * [a.后端应用中心EM4设置](chapter3/E4managePage.md)
     * [b.客户端开启消息阅读状态功能](chapter3/MessageStatus.md)
