@@ -16,3 +16,9 @@ and msgid in ('d2a7d02b-37d1-4b50-b93f-1e919ad22477','48bce6ee-8912-4064-98a6-f7
 select b.imagefilename as 文件名,b.filerealpath as 文件路径,b.imagefiletype as 文件类型 from ImageFile b
 where exists(select 1 from social_IMFile where fileid = b.imagefileid)
 ```
+
+### 群组操作
+* 根据群组名称可以删除群关系
+```
+delete from mobile_ronggroup where group_id in (select targetid from social_IMConversation a where a.targetname in ('公司发文','文书科交流群','马钢协同办公系统'))
+```
