@@ -26,6 +26,7 @@
 * [3.EM4管理界面出现null字符](chapter2/E4nullSolve.md)
 * [4.EM4客户端安装报错](chapter2/E4installChErr.md)
 * 5.xp客户端问题
+    * [a.xp客户端双击白屏闪退](chapter2/xp/xpClientQuit.md)
 
 ## 第三章:EM4功能使用设置及相关配置说明
 * 1.客户端使用说明：

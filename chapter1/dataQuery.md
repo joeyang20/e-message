@@ -21,4 +21,13 @@ where exists(select 1 from social_IMFile where fileid = b.imagefileid)
 * 根据群组名称可以删除群关系
 ```
 delete from mobile_ronggroup where group_id in (select targetid from social_IMConversation a where a.targetname in ('公司发文','文书科交流群','马钢协同办公系统'))
+
+delete  from social_ImGroup_Rel where groupname in ('公司发文','文书科交流群','马钢协同办公系统')
+
+```
+
+
+### 名片相关的表
+```
+select * from SOCIAL_IMCHATRESOURCESHARE ;
 ```

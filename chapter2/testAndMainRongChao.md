@@ -5,6 +5,8 @@
 
 ### 解决办法
 * 在测试环境的数据库上，执行以下语句，删除掉下面记录，<br/>
-`delete  from mobileProperty  where name = 'rongAppUDIDNew';` <br/>
+```
+delete  from mobileProperty  where name = 'rongAppUDIDNew';
+```
 
 * 执行上面语句以后，再重启一下测试环境的OA服务，这样问题就解决了。
