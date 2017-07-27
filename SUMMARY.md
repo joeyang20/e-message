@@ -27,6 +27,7 @@
 * [4.EM4客户端安装报错](chapter2/E4installChErr.md)
 * 5.xp客户端问题
     * [a.xp客户端双击白屏闪退](chapter2/xp/xpClientQuit.md)
+* 6.[待解决问题汇总](chapter2/UnSolveQue.md)
 
 ## 第三章:EM4功能使用设置及相关配置说明
 * 1.客户端使用说明：
@@ -38,5 +39,6 @@
     * [b.客户端开启消息阅读状态功能](chapter3/MessageStatus.md)
     * [c.客户端设置消息撤回最大时间](chapter3/MessageWithDrawSet.md)
 * [3.官网更新包使用指南](chapter3/updateEmessage.md)
+* [4.私有云管理控制台使用](chapter3/privateCloudManage.md)
 
 ## 结束
