@@ -34,7 +34,7 @@ telnet IP 端口
 * 按照上方格式使用即可，下图：<br/>
 ![telnet命令](/image/c1/telnet命令.png "Title")<br/>
 **IP**：指需要访问的IP，就是**私有云部署的IP地址**，这里**特指下面配置项的地址**，如图：
-![telnet成功](/image/c1/telnet地址说明.png "Title")
+![telnet成功](/image/c1/telnet地址说明.png "Title")<br/>
 **端口**：需要开放的端口，（简言之就是**7070，9090，5222**三个），<br/>
 * 如下图展示：端口开放成功示例：<br/>
 ![telnet成功](/image/c1/telnet成功.png "Title")
