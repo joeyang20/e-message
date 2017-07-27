@@ -23,7 +23,6 @@ where exists(select 1 from social_IMFile where fileid = b.imagefileid)
 delete from mobile_ronggroup where group_id in (select targetid from social_IMConversation a where a.targetname in ('公司发文','文书科交流群','马钢协同办公系统'))
 
 delete  from social_ImGroup_Rel where groupname in ('公司发文','文书科交流群','马钢协同办公系统')
-
 ```
 
 
