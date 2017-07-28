@@ -19,6 +19,7 @@ update Social_Pc_ClientSettings set keyvalue = 1024 where fromtype = '1' and key
 ```
 客户端相关函数：ecology\social\im\js\im_pc_wev8.js
 appkey文件：/ecology/WEB-INF/prop/EMobileRong.properties
+过滤器：ecology\WEB-INF\web.xml
 ```
 * 7.修改oa链接已断开提示：<br/>
 修改文件：ecology\social\im\js\im_pc_wev8.js<br/>
