@@ -55,3 +55,18 @@ select id,departmentname from HrmDepartment where subcompanyid1=0 and (canceled 
 ```sql
 select id,lastname,loginid,messagerurl from HrmResource where departmentid='部门id' and status in(0,1,2,3) order by dsporder;
 ```
+
+## 客户端设置保存
+
+根据userid可以查到每个人的设置： 
+
+```sql
+select * from Social_IMUserSysConfig a where a.userId = 464;
+```
+
+"newMsg"：新消息到达直接弹出窗口；
+保存的是json串：
+
+```json
+{"download":{"defaultPath":"C:\\Users\\JOJO\\Desktop","isAuto":"false"},"guid":"dfeb2748-b7ac-44f9-a107-bbef689f0f59","login":{"autoLogin":false,"language":"zh"},"mainPanel":{"alwaysQuit":true,"noLongerRemind":false},"msgAndRemind":{"audioSet":{"all":false,"broadcast":false,"group":false,"persion":false},"mailRemind":true,"newMsg":true,"wfRemind":true,"audioSet_all":false},"shortcut":{"openAndHideWin":"ALT+W","screenshot":"CTRL+Q"},"skin":"default"}
+```
