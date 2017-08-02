@@ -8,7 +8,7 @@ ping api.cn.ronghub.com
 
 看看是否能够通；
 
-2.把`api.cn.ronghub.com`放到浏览器上运行，看是否能够出来页面，访问不到就是问题。
+2.把**api.cn.ronghub.com**放到浏览器上运行，看是否能够出来页面，访问不到就是问题。
 
 3.如果是linux环境上没有浏览器，可以试试：
 

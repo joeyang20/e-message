@@ -80,22 +80,28 @@ select * from SOCIAL_IMCHATRESOURCESHARE;
 
 ## 组织架构查询
 
-查询总部下分所有下级分部（supsubcomid=0）
+查询总部下分所有下级分部（supsubcomid=0）：
 
 ```sql
 select id,subcompanyname from HrmSubCompany where supsubcomid=0 and (canceled is null or canceled<>1) order by showorder asc , subcompanyname asc;
 ```
 
-查询总部下分部的部门列表（总部subcompanyid1=0，其他分部的是其他id）
+查询总部下分部的部门列表（总部是subcompanyid1=0 and supdepid=0，其他分部的是其他id）：
 
 ```sql
 select id,departmentname from HrmDepartment where subcompanyid1=0 and (canceled is null or canceled<>1) and supdepid=0 order by showorder asc, departmentname asc;
 ```
 
-查询部门下直接人员
+查询部门下直接人员：
 
 ```sql
 select id,lastname,loginid,messagerurl from HrmResource where departmentid='部门id' and status in(0,1,2,3) order by dsporder;
+```
+
+由于上面的supdepid不等于导致下级部门没有查询出来，emessage上的组织架构没能展示，目前暂时用下面的语句可以修改让其显示出来（supdepid表示多级部门）：
+
+```sql
+update HrmDepartment set [supdepid] = 0  where subcompanyid1 in (select id from HrmSubCompany where  supsubcomid=117 and(canceled is null or canceled<>1)) and  (canceled is null or canceled<>1);
 ```
 
 ## 客户端设置保存
