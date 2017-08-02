@@ -23,16 +23,40 @@ ClientSet.maxWithdrawTime = 1200000
 update Social_Pc_ClientSettings set keyvalue = 1024 where fromtype = '1' and keytitle = 'maxAccUploadSize';
 ```
 
-* 6.oa文件路径记录：
-
-```txt
-客户端相关函数：ecology\social\im\js\im_pc_wev8.js
-appkey文件：/ecology/WEB-INF/prop/EMobileRong.properties
-过滤器：ecology\WEB-INF\web.xml
-```
-
-* 7.修改oa链接已断开提示：
+7.修改oa链接已断开提示：
 
 修改文件：ecology\social\im\js\im_pc_wev8.js
 位置如下图：
 ![修改位置](/image/c1/修改客户端连接断开提醒.png "Title")
+
+8.客户端快捷键
+win版本
+
+```txt
+撤销  Ctrl+Z
+重做  Shift+Ctrl+Z
+剪切  Ctrl+X
+复制  Ctrl+C
+全选  Ctrl+A
+清理缓存 Ctrl+R
+切换全屏 F11
+最小化 Ctrl+M
+关闭 Ctrl+W
+```
+
+mac版本
+
+```txt
+撤销  Command+Z
+重做  Shift+Command+Z
+剪切  Command+X
+复制  Command+C
+全选  Command+A
+清理缓存 Command+R
+切换全屏 Ctrl+Command+F
+最小化 Command+M
+关闭 Command+W
+隐藏 Command+H
+隐藏其它 Command+Alt+H
+退出 Command+Q
+```
