@@ -60,3 +60,9 @@ mac版本
 隐藏其它 Command+Alt+H
 退出 Command+Q
 ```
+
+9.检查文件系统语言版本
+
+```sql
+select language, activable from syslanguage where activable = 1 and id = 7;(7,8,9)
+```

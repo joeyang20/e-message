@@ -8,6 +8,8 @@ appkey文件：/ecology/WEB-INF/prop/EMobileRong.properties
 过滤器：ecology\WEB-INF\web.xml
 组织架构：HrmOrgTree
 脚本：ecology\social\im\SocialIMUtil.jsp
+群设置文件：SocialDiscussSetting.jsp
+图片轮播页面：ecology\social\im\imageReview.jsp
 ```
 
 相关方法：
