@@ -72,6 +72,12 @@ select (select id from social_ImGroup where name = '我的群聊' and createUser
 (select userid,group_id,isopenfire from mobile_rongGroup group by userid,group_id,isopenfire) a,(select targetid,targetname from social_IMConversation group by targetid,targetname) b where a.group_id = b.targetid;
 ```
 
+会话表查群组id：
+
+```sql
+select * from social_IMConversation where targetname = '群名';
+```
+
 ## 名片相关的表
 
 ```sql
@@ -98,7 +104,7 @@ select id,departmentname from HrmDepartment where subcompanyid1=0 and (canceled 
 select id,lastname,loginid,messagerurl from HrmResource where departmentid='部门id' and status in(0,1,2,3) order by dsporder;
 ```
 
-由于上面的supdepid不等于导致下级部门没有查询出来，emessage上的组织架构没能展示，目前暂时用下面的语句可以修改让其显示出来（supdepid表示多级部门）：
+由于上面的supdepid不等于0导致下级部门没有查询出来，emessage上的组织架构没能展示，目前暂时用下面的语句可以修改让其显示出来（supdepid表示多级部门）：
 
 ```sql
 update HrmDepartment set [supdepid] = 0  where subcompanyid1 in (select id from HrmSubCompany where  supsubcomid=117 and(canceled is null or canceled<>1)) and  (canceled is null or canceled<>1);

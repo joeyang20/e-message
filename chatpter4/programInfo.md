@@ -33,3 +33,19 @@ vs-code调试：
     }]
 }
 ```
+
+```java
+jsp添加日志：
+方法一：
+<%@page import="weaver.general.BaseBean"%>
+BaseBean log = new BaseBean();
+log.writeLog("addOrDelGroupBook===========resourceids="+resourceids);
+
+方法二：
+<jsp:useBean id="log" class="weaver.general.BaseBean" scope="page" />
+log.writeLog("addOrDelGroupBook===========resourceids="+resourceids);
+
+
+java打日志：
+new BaseBean().writeLog("querySql============"+querySql);
+```
