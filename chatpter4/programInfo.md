@@ -10,6 +10,7 @@ appkey文件：/ecology/WEB-INF/prop/EMobileRong.properties
 脚本：ecology\social\im\SocialIMUtil.jsp
 群设置文件：SocialDiscussSetting.jsp
 图片轮播页面：ecology\social\im\imageReview.jsp
+开启emessage功能：ecology\WEB-INF\prop\Messager2.properties
 ```
 
 相关方法：
@@ -48,4 +49,10 @@ log.writeLog("addOrDelGroupBook===========resourceids="+resourceids);
 
 java打日志：
 new BaseBean().writeLog("querySql============"+querySql);
+```
+
+程序调试总结：
+
+```log
+
 ```
