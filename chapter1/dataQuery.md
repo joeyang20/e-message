@@ -12,6 +12,38 @@ and msgid in ('d2a7d02b-37d1-4b50-b93f-1e919ad22477','48bce6ee-8912-4064-98a6-f7
 
 fromuserid：代表发送的人，targetid：代表接收的对象，可以某个人的id（单聊），也可以是群组id（群聊），msgid：指的是消息id，单指某条消息
 
+消息记录后台查询的表，私有云聊天记录返回查询语句
+
+```sql
+select *
+  from (select A.*, rownum rn
+          from (select id,
+                       fromUserId,
+                       targetId,
+                       targetType,
+                       GroupId,
+                       classname,
+                       msgContent,
+                       extra,
+                       type,
+                       imageUri,
+                       dateTime,
+                       msgid,
+                       fullAmount
+                  from HistoryMsgRecently
+                 where groupid =
+                   and dateTime < to_char('2061-10-1','yyyy-mm-dd')
+                   and classname not in
+                       ('FW:CountMsg',
+                        'FW:SyncQuitGroup',
+                        'FW:SyncMsg',
+                        'FW:SysMsg',
+                        'FW:ClearUnreadCount') order  by dateTime desc) A
+         where rownum <= 10)
+ where rn >= 1
+ order by dateTime desc;
+```
+
 ## 附件操作
 
 用下面的语句可以查询在客户端上传的所有附件的信息：
@@ -116,6 +148,7 @@ update HrmDepartment set [supdepid] = 0  where subcompanyid1 in (select id from 
 
 ```sql
 select * from Social_IMUserSysConfig a where a.userId = 464;
+select * from Social_Pc_ClientSettings;
 ```
 
 "newMsg"：新消息到达直接弹出窗口；
@@ -123,4 +156,18 @@ select * from Social_IMUserSysConfig a where a.userId = 464;
 
 ```json
 {"download":{"defaultPath":"C:\\Users\\JOJO\\Desktop","isAuto":"false"},"guid":"dfeb2748-b7ac-44f9-a107-bbef689f0f59","login":{"autoLogin":false,"language":"zh"},"mainPanel":{"alwaysQuit":true,"noLongerRemind":false},"msgAndRemind":{"audioSet":{"all":false,"broadcast":false,"group":false,"persion":false},"mailRemind":true,"newMsg":true,"wfRemind":true,"audioSet_all":false},"shortcut":{"openAndHideWin":"ALT+W","screenshot":"CTRL+Q"},"skin":"default"}
+```
+
+## 国际化标签
+
+```sql
+select * from HtmlLabelInfo a where a.indexid = 18014;
+select * from HtmlLabelInfo a where a.labelname like '%禁止%';
+```
+
+## 群组消息阅读状态
+
+```sql
+根据msgid查询count消息：status=0代表已读，status=1代表未读
+select * from social_IMMsgRead where  msgid='' and status=1 order by id asc
 ```

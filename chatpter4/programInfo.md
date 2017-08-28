@@ -11,6 +11,7 @@ appkey文件：/ecology/WEB-INF/prop/EMobileRong.properties
 群设置文件：SocialDiscussSetting.jsp
 图片轮播页面：ecology\social\im\imageReview.jsp
 开启emessage功能：ecology\WEB-INF\prop\Messager2.properties
+客户端版本：ecology\social\im\resources\emessage.properties
 ```
 
 相关方法：
@@ -54,5 +55,33 @@ new BaseBean().writeLog("querySql============"+querySql);
 程序调试总结：
 
 ```log
+$("#tempchatFloatmenu")：消息体悬浮框div
+```
 
+## 顶部快捷栏
+
+```txt
+展示页面：social/manager/SocialTopButtonsInner.jsp
+保存设置：savefieldbatch1：/ecology8/social/manager/SocialManagerOperation.jsp
+select * from Social_Pc_UrlIcons a;
+
+
+/ecology8/social/im/SocialIMPcModels.jsp
+（设置为-1会报错，这个功能是云盘）
+update Social_Pc_UrlIcons set icotype = -1 where linkuri = '/rdeploy/chatproject/doc/index.jsp
+```
+
+## 页面设置上传附件大小
+
+```log
+页面地址：social/manager/SocialAppSettingCommon.jsp
+
+根据表查询设置：
+select * from Social_Pc_ClientSettings where fromtype = '1';
+一共有两项，maxGroupMems 群组人数上限， maxAccUploadSize 上传附件大小限制
+
+可以通过数据库直接更新该字段：
+update Social_Pc_ClientSettings set keyvalue = '2048' where keytitle = 'maxAccUploadSize';
+
+提交保存:SocialManagerOperation.jsp?method=basesetting&fromtype=1
 ```
