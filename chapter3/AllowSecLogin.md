@@ -1,6 +1,11 @@
 # 设置允许账号二次登陆
 
-为了解决客户端登陆不显示，白屏等错误：
+为了解决客户端登陆不显示，白屏等错误，还有一种错误是repeatLanding错误，这类错误需要往数据库social_IMsessionkey表写入一条记录才可以：
+
+```sql
+把缺失的id补全：
+insert into social_IMsessionkey(userid) values('');
+```
 
 ![允许同一用户重复登录](/image/c3/后端设置允许同一用户重复登录.png "Title")
 
