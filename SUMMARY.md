@@ -43,6 +43,7 @@
     * [b.客户端开启消息阅读状态功能](chapter3/MessageStatus.md)
     * [c.客户端设置消息撤回最大时间](chapter3/MessageWithDrawSet.md)
     * [d.主次账号功能说明](chapter3/MainMinorAccount.md)
+    * [e.后端设置允许重复登录](chapter3/AllowSecLogin.md)
 * [3.官网更新包使用指南](chapter3/updateEmessage.md)
 * [4.私有云管理控制台使用](chapter3/privateCloudManage.md)
 

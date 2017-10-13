@@ -104,6 +104,12 @@ select (select id from social_ImGroup where name = '我的群聊' and createUser
 (select userid,group_id,isopenfire from mobile_rongGroup group by userid,group_id,isopenfire) a,(select targetid,targetname from social_IMConversation group by targetid,targetname) b where a.group_id = b.targetid;
 ```
 
+群聊分组重复：
+
+```sql
+delete  from social_imgroup where id <>1 and name = '我的群聊'
+```
+
 会话表查群组id：
 
 ```sql
@@ -128,9 +134,12 @@ select id,subcompanyname from HrmSubCompany where supsubcomid=0 and (canceled is
 
 ```sql
 select id,departmentname from HrmDepartment where subcompanyid1=0 and (canceled is null or canceled<>1) and supdepid=0 order by showorder asc, departmentname asc;
+
+subcompany：
+select id,departmentname from HrmDepartment where subcompanyid1= and (canceled is null or canceled<>1) and supdepid=0 order by showorder asc, departmentname asc
 ```
 
-查询部门下直接人员：
+查询部门下直接人
 
 ```sql
 select id,lastname,loginid,messagerurl from HrmResource where departmentid='部门id' and status in(0,1,2,3) order by dsporder;
@@ -140,6 +149,11 @@ select id,lastname,loginid,messagerurl from HrmResource where departmentid='部�
 
 ```sql
 update HrmDepartment set [supdepid] = 0  where subcompanyid1 in (select id from HrmSubCompany where  supsubcomid=117 and(canceled is null or canceled<>1)) and  (canceled is null or canceled<>1);
+
+oracle：
+ update HrmDepartment set supdepid = 0
+ where subcompanyid1 in （select id from HrmSubCompany where supsubcomid=0 and
+ (canceled is null or canceled<>1)）  and  (canceled is null or canceled<>1) and supdepid is null;
 ```
 
 ## 客户端设置保存
@@ -170,4 +184,20 @@ select * from HtmlLabelInfo a where a.labelname like '%禁止%';
 ```sql
 根据msgid查询count消息：status=0代表已读，status=1代表未读
 select * from social_IMMsgRead where  msgid='' and status=1 order by id asc
+```
+
+## 广播数据查询
+
+```sql
+--这个是广播内容表
+select * from social_broadcast ;
+
+---这个是广播接收者表
+select * from social_broadcastreceiver ;
+
+两个表之间通过msgid进行关联,如果想要一个人的广播列表查询不到某一条广播,需要将广播接收者的记录删掉就可以了
+
+步骤:
+先用广播内容表查出来对应的内容，对应的msgid，
+然后根据msgid查到接收者的记录，然后把接收者的记录删除即可。
 ```

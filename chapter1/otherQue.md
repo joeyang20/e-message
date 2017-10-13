@@ -64,5 +64,18 @@ mac版本
 9.检查文件系统语言版本
 
 ```sql
-select language, activable from syslanguage where activable = 1 and id = 7;(7,8,9)
+select language, activable from syslanguage where activable = 1 and id = 7;
+(7(简体中文),8(英文),9(繁体中文))
+```
+
+10.手机端检查连接消息云:
+
+除了检查5222端口的访问，可以通过服务接口的访问来确认数据：
+
+```html
+http://office.whit.edu.cn:89/client.do?method=login&loginid=jcx&password=1
+```
+
+```json
+{"openfaceanalyse":"0","sessionkey":"abcjsvvNDvMpKenObaP6v","hrmorgshow":"true","hasBroadCast":null,"rongAppKey":"8w7jv4qb7ucqy","commonGroupshow":"true","mysubordinateshow":"true","version":"6.5","openfireDomain":"","ryudidNew":"ZzQLNDI9","headpic":"\/messager\/images\/icon_m_wev8.jpg","openfireHost":"office.whit.edu.cn","openfireModule":"true","navigation":[{"id":"1","default":"1","ulogo_url":null,"logo_url":null,"url":"","displayname":"消息"},{"id":"2","default":"0","ulogo_url":null,"logo_url":null,"url":"","displayname":"应用"},{"id":"3","default":"0","ulogo_url":null,"logo_url":null,"url":"","displayname":"通讯录"},{"id":"4","default":"0","ulogo_url":null,"logo_url":null,"url":"","displayname":"我"}],"sameDepartmentshow":"true","createworkflow":"1","groupChatshow":"true","allPeopleshow":"true","creategroupchat":"1"}
 ```
