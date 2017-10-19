@@ -79,3 +79,7 @@ http://office.whit.edu.cn:89/client.do?method=login&loginid=jcx&password=1
 ```json
 {"openfaceanalyse":"0","sessionkey":"abcjsvvNDvMpKenObaP6v","hrmorgshow":"true","hasBroadCast":null,"rongAppKey":"8w7jv4qb7ucqy","commonGroupshow":"true","mysubordinateshow":"true","version":"6.5","openfireDomain":"","ryudidNew":"ZzQLNDI9","headpic":"\/messager\/images\/icon_m_wev8.jpg","openfireHost":"office.whit.edu.cn","openfireModule":"true","navigation":[{"id":"1","default":"1","ulogo_url":null,"logo_url":null,"url":"","displayname":"消息"},{"id":"2","default":"0","ulogo_url":null,"logo_url":null,"url":"","displayname":"应用"},{"id":"3","default":"0","ulogo_url":null,"logo_url":null,"url":"","displayname":"通讯录"},{"id":"4","default":"0","ulogo_url":null,"logo_url":null,"url":"","displayname":"我"}],"sameDepartmentshow":"true","createworkflow":"1","groupChatshow":"true","allPeopleshow":"true","creategroupchat":"1"}
 ```
+
+11.配置cas过滤:
+配置项：excludePath
+值（在后面添加即可）：|/mobile/|/social/|/messager/|/wui/|/FCKEditor/|/images/|/page/|/express/|/rdeploy/|/hrm/|
