@@ -14,6 +14,12 @@ appkey文件：/ecology/WEB-INF/prop/EMobileRong.properties
 客户端版本：ecology\social\im\resources\emessage.properties
 ```
 
+浏览器上看：
+
+```txt
+/social/im/resources/emessage.properties
+```
+
 相关方法：
 
 ```txt
@@ -84,4 +90,11 @@ select * from Social_Pc_ClientSettings where fromtype = '1';
 update Social_Pc_ClientSettings set keyvalue = '2048' where keytitle = 'maxAccUploadSize';
 
 提交保存:SocialManagerOperation.jsp?method=basesetting&fromtype=1
+```
+
+## 单点登录
+
+```SQL
+select sysid,name from outter_sys;
+select * from Social_Pc_UrlIcons where icotype = '1' order by showindex
 ```

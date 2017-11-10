@@ -83,3 +83,10 @@ http://office.whit.edu.cn:89/client.do?method=login&loginid=jcx&password=1
 11.配置cas过滤:
 配置项：excludePath
 值（在后面添加即可）：|/mobile/|/social/|/messager/|/wui/|/FCKEditor/|/images/|/page/|/express/|/rdeploy/|/hrm/|
+
+12.私有云忘记密码可以查出来：
+
+```sql
+select * from ofproperty where name = 'passwordKey';
+select encryptedPassword from ofuser where username = 'admin';
+```
