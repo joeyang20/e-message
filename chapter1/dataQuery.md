@@ -201,3 +201,9 @@ select * from social_broadcastreceiver ;
 先用广播内容表查出来对应的内容，对应的msgid，
 然后根据msgid查到接收者的记录，然后把接收者的记录删除即可。
 ```
+
+### emessage最近列表
+
+```sql
+delete from social_IMRecentConver where userid = '3945'
+```

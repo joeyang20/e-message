@@ -80,9 +80,10 @@ http://office.whit.edu.cn:89/client.do?method=login&loginid=jcx&password=1
 {"openfaceanalyse":"0","sessionkey":"abcjsvvNDvMpKenObaP6v","hrmorgshow":"true","hasBroadCast":null,"rongAppKey":"8w7jv4qb7ucqy","commonGroupshow":"true","mysubordinateshow":"true","version":"6.5","openfireDomain":"","ryudidNew":"ZzQLNDI9","headpic":"\/messager\/images\/icon_m_wev8.jpg","openfireHost":"office.whit.edu.cn","openfireModule":"true","navigation":[{"id":"1","default":"1","ulogo_url":null,"logo_url":null,"url":"","displayname":"消息"},{"id":"2","default":"0","ulogo_url":null,"logo_url":null,"url":"","displayname":"应用"},{"id":"3","default":"0","ulogo_url":null,"logo_url":null,"url":"","displayname":"通讯录"},{"id":"4","default":"0","ulogo_url":null,"logo_url":null,"url":"","displayname":"我"}],"sameDepartmentshow":"true","createworkflow":"1","groupChatshow":"true","allPeopleshow":"true","creategroupchat":"1"}
 ```
 
-11.配置cas过滤:
+11.配置cas过滤:(如果是客户端单点登录，还需要另外配置其他过滤项)
+
 配置项：excludePath
-值（在后面添加即可）：|/mobile/|/social/|/messager/|/wui/|/FCKEditor/|/images/|/page/|/express/|/rdeploy/|/hrm/|
+值（在后面添加即可）：|/mobile/|/social/|/messager/|/wui/|/FCKEditor/|/images/|/page/|/express/|/rdeploy/|/hrm/|/systeminfo/|
 
 12.私有云忘记密码可以查出来：
 
@@ -90,3 +91,19 @@ http://office.whit.edu.cn:89/client.do?method=login&loginid=jcx&password=1
 select * from ofproperty where name = 'passwordKey';
 select encryptedPassword from ofuser where username = 'admin';
 ```
+
+13.oa在线状态获取
+
+HrmUserOnlineMap  获取在线用户
+
+14.init_wev8.jsp
+
+判断是否允许重复登录。
+setting.getReLogin();等于1代表可以。
+
+15.EMobile4.properties
+
+配置文件中的serverUrl和pushkey, emobile移动端接收待办流程消息
+
+16.客户端出现无法打开的错误的时候，可以用这个试试
+netsh winsock reset
