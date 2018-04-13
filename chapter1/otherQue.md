@@ -85,6 +85,20 @@ http://office.whit.edu.cn:89/client.do?method=login&loginid=jcx&password=1
 配置项：excludePath
 值（在后面添加即可）：|/mobile/|/social/|/messager/|/wui/|/FCKEditor/|/images/|/page/|/express/|/rdeploy/|/hrm/|/systeminfo/|
 
+```txt
+/mobile/
+/social/
+/messager/
+/wui/
+/FCKEditor/
+/images/
+/page/
+/express/
+/rdeploy/
+/hrm/
+/systeminfo/
+```
+
 12.私有云忘记密码可以查出来：
 
 ```sql
@@ -107,3 +121,19 @@ setting.getReLogin();等于1代表可以。
 
 16.客户端出现无法打开的错误的时候，可以用这个试试
 netsh winsock reset
+
+17.sso配置拦截白名单
+/wui/main.jsp
+/workflow/request/RequestView.jsp
+/workplan/data/WorkPlan.jsp
+/email/new/MailFrame.jsp
+/systeminfo/BrowserMain.jsp
+/workflow/request/*
+
+18.修改群主（私有云）
+
+```sql
+select * from ofgroupuser where groupname in (select groupname from ofgroup where description = '信息技术工作讨论群') and administrator = 0;
+
+update  ofgroupuser  set administrator = 1 where groupname in (select groupname from ofgroup where description = '梦想4,Andy,mango') and administrator = 0 and username = '40320|ujchgxhx';
+```
