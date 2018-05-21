@@ -26,3 +26,5 @@
 
 * << [访问本文内容](https://joeyang20.gitbooks.io/e-message/content/)
 * << [访问E-message官网升级包下载地址](http://im.cobiz.cn/html/download.html)
+
+### 以后不再更新
